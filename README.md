@@ -1,0 +1,2 @@
+# LeetCode
+easyの問題
