@@ -7,4 +7,5 @@ def search(pos):
     print(pos, end=' ')
     for i in tree[pos]:
         search(i)
+
 search(0)
