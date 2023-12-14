@@ -1,8 +1,10 @@
-strs = ["flower","flow","flight"]
-#"cir", "car"
+strs = ["cir", "car"]
+#"flower","flow","flight"
 answer = ""
-l = list(zip(*strs))
-for i in l:
+rows = list(zip(*strs))
+for i in rows:
     if len(set(i)) == 1:
       answer = answer + i[0]
+    else:
+       break
 print(answer)
