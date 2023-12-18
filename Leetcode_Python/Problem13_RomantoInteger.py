@@ -43,4 +43,5 @@ while(i != len(romans)):
     elif(romans[i] == 'M'):
         answer = answer + 1000
     i = i + 1
+
 print("計算結果：" + str(answer))
