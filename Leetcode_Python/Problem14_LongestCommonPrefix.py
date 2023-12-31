@@ -1,5 +1,5 @@
-strs = ["cir", "car"]
-#"flower","flow","flight"
+strs = ["flower","flow","flight"]
+#"cir", "car"
 answer = ""
 rows = list(zip(*strs))
 for i in rows:
