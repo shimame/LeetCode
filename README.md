@@ -1,0 +1,1 @@
+LeetCodeのeasyを解いたものをpushしています。
