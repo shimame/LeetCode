@@ -1,4 +1,4 @@
-s = "MCMXCIV"
+s = "LVIII"
 answer = 0
 romans = list(s)
 i = 0
