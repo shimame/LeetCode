@@ -5,7 +5,6 @@ def strStr(haystack, needle):
         return -1
 
     for i in range(len(haystack)):
-        print('i = ' + str(i))
         match = True #一致しているものとして探索開始
         for j in range(len(needle)):
             if len(haystack) <= i + j:
@@ -14,18 +13,13 @@ def strStr(haystack, needle):
             
             if (haystack[i + j] != needle[j]):
                 match = False #一致しなかった
-                print('i = ' + str(i) + '   j = ' + str(j))
-                print('Break!!')
                 break
             else:
                 position = i + j - (len(needle) - 1)
-                print('i = ' + str(i) + '   j = ' + str(j))
-                print('match = ' + str(match))
-        if match: #すべての文字が一致していれば出力
-            print('True')
-            return position
+            if match and j == len(needle) - 1: #すべての文字が一致していれば出力
+                return position
     return -1
 
-haystack = "mississippi"
-needle = "issipi"
+haystack = "sadbutsad"
+needle = "sad"
 print(strStr(haystack,needle))
