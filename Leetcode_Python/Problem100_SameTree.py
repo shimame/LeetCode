@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 
-def isSameTree(p, q):
+def isSameTree(self, p, q):
     """
     :type p: TreeNode
     :type q: TreeNode
