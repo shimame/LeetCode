@@ -1,24 +1,18 @@
 def lengthOfLongestSubstring(s):
     i = 0
-    count = 0
     strs = list(s)
-    memory = []
-    length = []
+    memory = ""
+    max_length = 0
     
     while i < len(strs):
         if strs[i] in memory:
-            length.append(count)
-            count = 1
-            del memory[0:i]
-            memory.append(strs[i])
-        else:
-            memory.append(strs[i])
-            count += 1
-        #print(count)
-        #print(memory)
+            memory =  memory[memory.index(strs[i])+1:]
+
+        memory = memory + strs[i]
         i += 1
-    length.append(count)
-    return max(length)
+        max_length = max(max_length, len(memory))
+        
+    return max_length
 
 s = "abcabcbb"
 print(lengthOfLongestSubstring(s))
