@@ -1,1 +1,3 @@
-LeetCodeのeasyを解いたものをpushしています。
+LeetCodeの解いたものをpushしています。
+
+コミットメッセージがProgressFixErrorはうまくエラーを解消できていないものです。
