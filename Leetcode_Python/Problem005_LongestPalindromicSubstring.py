@@ -1,16 +1,23 @@
-def longestPalindrome(s):
-    n = len(s)
-    if n < 2: return s
-    dp = [[0]*n for _ in range(n)]
-    ans = {}
-    for i in range(n-1, -1, -1):
-        for j in range(i, n):
-            if s[i] == s[j] and ((j - i + 1) <= 3 or dp[i + 1][j - 1]):
-                dp[i][j] = True
-                ans[j-i+1] = s[i:j+1]
-            else:
-                dp[i][j] = False
-    return ans[max(ans)]
+class Solution(object):
+    def longestPalindrome(self, s):
+        max_strings = ""
+        for i in range(len(s)):
+            tmp = self.search_strings(s, i, i) #真ん中の文字(s[i])を境に左右対称
+            if len(tmp) > len(max_strings):
+                max_strings = tmp
+            tmp = self.search_strings(s, i, i+1) #文字(s[i],s[i+1])を境に左右対称
+            if len(tmp) > len(max_strings):
+                max_strings = tmp
+        return max_strings
 
-s = "babad"
-print(longestPalindrome(s))
+    def search_strings(self, s, l, r):
+        while l >= 0 and r < len(s) and s[l] == s[r]:
+            l -= 1; r += 1
+        return s[l+1:r]
+
+
+isinstance = Solution()
+s0 = "babad"
+s1 = "cbbd"
+print(isinstance.longestPalindrome(s0))
+print(isinstance.longestPalindrome(s1))
