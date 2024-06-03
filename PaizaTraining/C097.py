@@ -2,7 +2,7 @@ def gcd(x, y):
     if x < y:
         x, y = y, x
     if x % y == 0:
-        return x
+        return y
     r = x % y
     while True:
         x, y = y, r
@@ -12,13 +12,13 @@ def gcd(x, y):
     return y
 
 s = input().rstrip().split(' ')
-answer = ["N"]
+answer = []
 n = int(s[0])
 x = int(s[1])
 y = int(s[2])
-both = gcd(x, y)
-# print(both) #ここが直さないといけない
-for i in range(2, n+1):      
+both = (x * y) / gcd(x, y)
+
+for i in range(1, n+1):      
     if i % both == 0:
         answer.append("AB")
     elif i % x == 0:
