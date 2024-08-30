@@ -1,0 +1,6 @@
+k = int(input())
+fib = [0] * k
+fib[0], fib[1] = 1, 1
+for i in range(2, k):
+    fib[i] = fib[i - 1] + fib[i - 2]
+print(fib[k-1])
