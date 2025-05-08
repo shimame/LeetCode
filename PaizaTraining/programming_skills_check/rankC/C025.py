@@ -11,7 +11,7 @@ for i in range(1, n):
         amount = fax[i][2]
     else:
         amount += fax[i][2]
-    print(i, amount, count)
+
 count += amount // m
 if amount % m != 0:
     count += 1
