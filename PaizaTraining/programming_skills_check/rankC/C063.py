@@ -16,3 +16,12 @@ for j in set_bloom_days:
         max_bloom_day = j
         
 print(max_bloom_day)
+
+"""another answer
+n = int(input())
+days = [0] * 61
+for _ in range(n):
+    a, b = map(int, input().split())
+    days[a + b] += 1
+print(days.index(max(days)))
+"""
